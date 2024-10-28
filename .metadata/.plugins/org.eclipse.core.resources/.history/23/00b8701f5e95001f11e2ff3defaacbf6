@@ -1,0 +1,6 @@
+package gregoire.jdr.repository.model.admin.request;
+
+@Component
+public class AdminRegisterActionRepositoryRequest {
+
+}

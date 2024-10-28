@@ -1,0 +1,19 @@
+package gregoire.jdr.access.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.access.validators.commons.AccessValidatorUtils;
+
+@Service
+public class AdminAccessValidator {
+	
+	private AccessValidatorUtils validatorUtils;
+
+	public AdminAccessValidator(AccessValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+	
+	public AdminRegisterAccessRequest validateAdminRegisterAccessRequest() {
+		
+	}
+}

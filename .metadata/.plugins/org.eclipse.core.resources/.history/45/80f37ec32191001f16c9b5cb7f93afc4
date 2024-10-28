@@ -1,0 +1,11 @@
+package gregoire.jdr.web.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminWebValidator {
+
+	public AdminWebValidator() {
+		
+	}
+}

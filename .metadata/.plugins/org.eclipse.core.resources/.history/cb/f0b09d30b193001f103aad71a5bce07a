@@ -1,0 +1,57 @@
+package gregoire.jdr.buisness;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.access.model.admin.request.AdminRegisterActionAccessRequest;
+import gregoire.jdr.buisness.model.admin.request.AdminRegisterActionBuisnessRequest;
+import gregoire.jdr.buisness.model.admin.response.AdminRegisterActionBuisnessResponse;
+
+@Service
+public class AdminBuisness {
+	
+	private AdminBuisnessRequestMapper requestMapper;
+	private AdminBuisnessResponseMapper responseMapper;
+	private AdminBuisnessValidator validator;
+	private AdminService adminService;
+
+	public AdminBuisness() {
+		
+	}
+	
+	public AdminRegisterActionBuisnessResponse registerAction(AdminRegisterActionAccessRequest accessRequest) {
+		
+		AdminRegisterActionBuisnessRequest buisnessRequest = new AdminRegisterActionBuisnessRequest();
+		AdminRegisterActionBuisnessResponse buisnessResponse = new AdminRegisterActionBuisnessResponse();
+		
+		buisnessRequest = requestMapper.mappAdminRegisterActionBuisnessRequest(accessRequest, buisnessRequest);
+		
+		if (!buisnessRequest.getErrors().isEmpty()) {
+			
+			buisnessResponse = responseMapper.mappAdminRegisterActionBuisnessResponseInvalidBuisnessRequest(buisnessRequest, buisnessResponse);
+			
+			return buisnessResponse;
+		}
+		
+		buisnessRequest = validator.validateAdminRegisterActionBuisnessRequest(buisnessRequest);
+		
+		if (!buisnessRequest.getErrors().isEmpty()) {
+			
+			buisnessResponse = responseMapper.mappAdminRegisterActionBuisnessResponseInvalidBuisnessRequest(buisnessRequest, buisnessResponse);
+			
+			return buisnessResponse;
+		}
+		
+		AdminRegisterActionServiceResponse serviceResponse = adminService.registerAction(buisnessRequest);
+		
+		if (!serviceResponse.getErrors().isEmpty()) {
+			
+			buisnessResponse = responseMapper.mappAdminRegisterActionBuisnessResponseInvalidServiceResponse(serviceResponse, buisnessResponse);
+			
+			return buisnessResponse;
+		}
+		
+		buisnessResponse = responseMapper.mappAdminRegisterActionBuisnessResponseOk(serviceResponse, buisnessResponse);
+		
+		return buisnessResponse;
+	}
+}

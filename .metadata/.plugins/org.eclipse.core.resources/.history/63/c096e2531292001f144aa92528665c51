@@ -1,0 +1,5 @@
+package gregoire.jdr.access.validators.admin;
+
+public class AdminAccessMapperValidator {
+
+}

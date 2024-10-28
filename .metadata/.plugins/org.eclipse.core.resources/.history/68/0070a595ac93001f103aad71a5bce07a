@@ -1,0 +1,5 @@
+package gregoire.jdr.buisness.model.admin.request;
+
+public class AdminRegisterActionBuisnessRequest {
+
+}

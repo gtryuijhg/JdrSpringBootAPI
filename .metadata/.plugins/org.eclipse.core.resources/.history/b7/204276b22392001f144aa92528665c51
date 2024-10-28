@@ -1,0 +1,27 @@
+package gregoire.jdr.web;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/characterInfo")
+public class CharacterInfoController {
+
+	public CharacterInfoController() {
+		
+	}
+	
+	/**
+	 * show page to create player character's infos
+	 * player character's id
+	 * 
+	 * TODO complete request/response path
+	 * TODO define management rules for every request's applicative part
+	 * TODO manage exception handling along path
+	 */
+	@GetMapping("/create/{id}")
+	public void create() {
+		
+	}
+}

@@ -1,0 +1,19 @@
+package gregoire.jdr.buisness.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.access.model.admin.request.AdminRegisterActionAccessRequest;
+import gregoire.jdr.buisness.model.admin.request.AdminRegisterActionBuisnessRequest;
+
+@Service
+public class AdminBuisnessRequestMapper {
+
+	public AdminBuisnessRequestMapper() {
+		
+	}
+	
+	public AdminRegisterActionBuisnessRequest mappAdminRegisterActionBuisnessRequest(AdminRegisterActionBuisnessRequest buisnessRequest, AdminRegisterActionAccessRequest accessRequest) {
+		
+		return buisnessRequest;
+	}
+}

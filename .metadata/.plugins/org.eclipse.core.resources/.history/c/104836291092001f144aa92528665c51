@@ -1,0 +1,11 @@
+package gregoire.jdr.access.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminAccessRequestMapper {
+
+	public AdminAccessRequestMapper() {
+		
+	}
+}

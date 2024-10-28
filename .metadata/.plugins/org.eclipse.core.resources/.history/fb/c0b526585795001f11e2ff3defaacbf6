@@ -1,0 +1,65 @@
+package gregoire.jdr.service.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.service.model.admin.request.AdminRegisterActionServiceRequest;
+import gregoire.jdr.service.validators.commons.ServiceValidatorUtils;
+
+@Service
+public class AdminServiceValidator {
+
+	private ServiceValidatorUtils validatorUtils;
+	
+	public AdminServiceValidator(ServiceValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+
+	public AdminRegisterActionServiceRequest validateAdminRegisterActionServiceRequest(AdminRegisterActionServiceRequest serviceRequest) {
+
+		//validate boolean role
+		try {
+			validatorUtils.isFieldBoolean(webRequest.isRole(), "An admin role must be a boolean !");
+		} catch (IllegalArgumentException e) {
+			webRequest.setErrors("role", e.getMessage());
+		}
+		
+		//validate boolean authenticated
+		try {
+			validatorUtils.isFieldBoolean(webRequest.isAuthenticated(), "An admin authentication must be a boolean !");
+		} catch (IllegalArgumentException e) {
+			webRequest.setErrors("authenticated", e.getMessage());
+		}
+		
+		//validate string firstName
+		try {
+			validatorUtils.isFieldString(webRequest.getFirstName(), "An admin first name must be a string !");
+		} catch (IllegalArgumentException e) {
+			webRequest.setErrors("firstName", e.getMessage());
+		}
+		
+		//validate string lastName
+		try {
+			validatorUtils.isFieldString(webRequest.getLastName(), "An admin last name must be a string !");
+		} catch (IllegalArgumentException e) {
+			webRequest.setErrors("lastName", e.getMessage());
+		}
+		
+		//validate string login
+		try {
+			validatorUtils.isFieldString(webRequest.getLogin(), "An admin login must be a string !");
+		} catch (IllegalArgumentException e) {
+			webRequest.setErrors("login", e.getMessage());
+		}
+		
+		//validate string password
+		try {
+			validatorUtils.isFieldString(webRequest.getPassword(), "An admin password must be a string !");
+		} catch (IllegalArgumentException e) {
+			webRequest.setErrors("password", e.getMessage());
+		}
+		
+		return serviceRequest;
+	}
+	
+	
+}

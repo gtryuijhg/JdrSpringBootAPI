@@ -1,0 +1,6 @@
+package gregoire.jdr.web.validators.commons;
+
+@Service
+public class ValidatorUtils {
+
+}

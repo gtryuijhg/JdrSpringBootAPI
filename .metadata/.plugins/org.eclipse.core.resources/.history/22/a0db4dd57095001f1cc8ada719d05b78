@@ -1,0 +1,5 @@
+package gregoire.jdr.queries.model.admin.response;
+
+public class AdminRegisterActionQueryResponse {
+
+}

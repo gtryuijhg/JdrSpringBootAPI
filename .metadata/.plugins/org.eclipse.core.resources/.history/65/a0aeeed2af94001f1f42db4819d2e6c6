@@ -1,0 +1,63 @@
+package gregoire.jdr.buisness.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.buisness.model.admin.request.AdminRegisterActionBuisnessRequest;
+import gregoire.jdr.buisness.validators.commons.BuisnessValidatorUtils;
+
+@Service
+public class AdminBuisnessValidator {
+
+	private BuisnessValidatorUtils validatorUtils;
+	
+	public AdminBuisnessValidator(BuisnessValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+
+	public AdminRegisterActionBuisnessRequest validateAdminRegisterActionBuisnessRequest(AdminRegisterActionBuisnessRequest buisnessRequest) {
+		
+		//validate boolean role
+		try {
+			validatorUtils.isBooleanTrue(buisnessRequest.isRole(), "An admin role must be at true !");
+		} catch (IllegalArgumentException e) {
+			buisnessRequest.setErrors("role", e.getMessage());
+		}
+		
+		//validate boolean authenticated
+		try {
+			validatorUtils.isBooleanFalse(buisnessRequest.isAuthenticated(), "You cannot be logged in while at the register page !");
+		} catch (IllegalArgumentException e) {
+			buisnessRequest.setErrors("authenticated", e.getMessage());
+		}
+		
+		//validate string firstName
+		try {
+			validatorUtils.isFieldString(buisnessRequest.getFirstName(), "Your first name must be a string !");
+			validatorUtils.isFieldMatchingRegex(buisnessRequest.getFirstName(), "#[^A-Za-zéèëîïôö]#", "Your first name can contain only allowed letters !");
+		} catch (IllegalArgumentException e) {
+			buisnessRequest.setErrors("firstName", e.getMessage());
+		}
+		
+		//validate string lastName
+		try {
+			validatorUtils.isFieldString(buisnessRequest.getLastName(), "Your last name must be a string !");
+			validatorUtils.isFieldMatchingRegex(buisnessRequest.getLastName(), "#[^A-Za-zéèëîïôö]#", "Your last name can contain only allowed letters !");
+		} catch (IllegalArgumentException e) {
+			buisnessRequest.setErrors("lastName", e.getMessage());
+		}
+		
+		//validate string login
+		try {
+			
+		} catch (IllegalArgumentException e) {
+			buisnessRequest.setErrors("login", e.getMessage());
+		}
+		//validate string password
+		
+		//validate string confirmPassword
+		
+		return buisnessRequest;
+	}
+	
+	
+}

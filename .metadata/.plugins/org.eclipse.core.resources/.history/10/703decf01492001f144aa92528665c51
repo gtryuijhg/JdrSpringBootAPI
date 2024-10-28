@@ -1,0 +1,23 @@
+package gregoire.jdr.access.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.access.model.admin.request.AdminRegisterAccessRequest;
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+
+@Service
+public class AdminAccessRequestMapper {
+
+	public AdminAccessRequestMapper() {
+		
+	}
+	
+	public AdminRegisterAccessRequest mappAdminRegisterAccessRequest(AdminRegisterWebRequest webRequest, AdminRegisterAccessRequest accessRequest) {
+		
+		accessRequest.setAuthenticated(webRequest.isAuthenticated());
+		
+		accessRequest.setRole(webRequest.isRole());
+		
+		return accessRequest;
+	}
+}

@@ -1,0 +1,15 @@
+package gregoire.jdr.web.model.admin.request;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AdminRegisterFrontRequest {
+
+	private Boolean role;
+	
+	private Boolean authenticated;
+	
+	public AdminRegisterFrontRequest() {
+		
+	}
+}

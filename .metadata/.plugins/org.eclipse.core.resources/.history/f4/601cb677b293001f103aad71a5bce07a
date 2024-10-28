@@ -1,0 +1,6 @@
+package gregoire.jdr.buisness.mapper.admin;
+
+@Service
+public class AdminBuisnessRequestMapper {
+
+}

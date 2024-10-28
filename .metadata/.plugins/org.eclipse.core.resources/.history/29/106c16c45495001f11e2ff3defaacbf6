@@ -1,0 +1,28 @@
+package gregoire.jdr.service.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.service.model.admin.request.AdminRegisterActionServiceRequest;
+import gregoire.jdr.service.validators.commons.ServiceValidatorUtils;
+
+@Service
+public class AdminServiceMapperValidator {
+
+	private ServiceValidatorUtils validatorUtils;
+	
+	public AdminServiceMapperValidator(ServiceValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+
+	public Boolean validateRegisterActionFieldRole(Boolean role, AdminRegisterActionServiceRequest serviceRequest) {
+		
+		try {
+			validatorUtils.isBooleanNull(role, "An admin role must be defined !");
+		} catch (NullPointerException e) {
+			serviceRequest.setErrors("role", e.getMessage());
+		}
+		return null;
+	}
+	
+	
+}

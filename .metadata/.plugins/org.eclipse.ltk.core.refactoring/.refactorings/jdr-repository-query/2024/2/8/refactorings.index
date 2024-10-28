@@ -1,0 +1,18 @@
+1708351575902	Delete element
+1708351580100	Delete element
+1708353096981	Delete element
+1708353103094	Delete element
+1708358379557	Rename package 'gregoire.jdr.repository.query.commons'
+1708502981348	Rename compilation unit 'ItemRepositoryQuery.java'
+1708874392366	Rename type 'AbilityQueryRepository'
+1708874401912	Rename type 'AdminQueryRepository'
+1708874415749	Rename type 'CharacterQueryRepository'
+1708874424762	Rename type 'EquipmentQueryRepository'
+1708874433234	Rename type 'GameQueryRepository'
+1708874442697	Rename type 'InfoQueryRepository'
+1708874451086	Rename type 'ItemQueryRepository'
+1708874462337	Rename type 'LocationQueryRepository'
+1708874472487	Rename type 'NonPlayerCharacterQueryRepository'
+1708874482147	Rename type 'SkillQueryRepository'
+1708874490619	Rename type 'StatQueryRepository'
+1708874499756	Rename type 'UserQueryRepository'

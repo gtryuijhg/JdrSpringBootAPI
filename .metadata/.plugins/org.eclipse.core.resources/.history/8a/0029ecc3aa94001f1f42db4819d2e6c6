@@ -1,0 +1,51 @@
+package gregoire.jdr.buisness.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.buisness.model.admin.request.AdminRegisterActionBuisnessRequest;
+import gregoire.jdr.buisness.validators.commons.BuisnessValidatorUtils;
+
+@Service
+public class AdminBuisnessMapperValidator {
+
+	private BuisnessValidatorUtils validatorUtils;
+	
+	public AdminBuisnessMapperValidator(BuisnessValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+
+	public Boolean validateRegisterActionFieldRole(Boolean role, AdminRegisterActionBuisnessRequest buisnessRequest) {
+		
+		try {
+			validatorUtils.isBooleanNull(role, "An admin role must be defined !");
+		} catch (NullPointerException e) {
+			buisnessRequest.setErrors("role", e.getMessage());
+		}
+		
+		return role;
+	}
+
+	public Boolean validateRegisterActionFieldAuthenticated(Boolean authenticated, AdminRegisterActionBuisnessRequest buisnessRequest) {
+		
+		try {
+			validatorUtils.isBooleanNull(authenticated, "An admin must be authenticable !");
+		} catch (NullPointerException e) {
+			buisnessRequest.setErrors("authenticated", e.getMessage());
+		}
+		
+		return authenticated;
+	}
+
+	public String validateRegisterActionFieldFirstName(String firstName, AdminRegisterActionBuisnessRequest buisnessRequest) {
+		
+		try {
+			
+		} catch (NullPointerException e) {
+			buisnessRequest.setErrors("firstName", e.getMessage());
+		}
+		
+		return firstName;
+	}
+	
+	
+}

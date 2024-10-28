@@ -1,0 +1,5 @@
+package gregoire.jdr.access.model.admin.response;
+
+public class AdminRegisterAccessResponse {
+
+}

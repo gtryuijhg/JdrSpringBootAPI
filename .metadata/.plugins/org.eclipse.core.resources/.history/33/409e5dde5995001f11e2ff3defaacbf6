@@ -1,0 +1,13 @@
+package gregoire.jdr.service.commons;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class TransactionHelper {
+
+	private PlatformTransactionManager platformTransactionManager;
+	
+	public TransactionHelper() {
+		
+	}
+}

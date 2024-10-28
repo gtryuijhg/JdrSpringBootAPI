@@ -1,0 +1,23 @@
+package gregoire.jdr.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "non_player_character")
+public class NonPlayerCharacter {
+
+	private Integer id;
+	
+	private String name;
+	
+	private Boolean hostility;
+	
+	private Integer locationId;
+	
+	private Integer gameId;
+	
+	public NonPlayerCharacter() {
+		
+	}
+}

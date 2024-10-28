@@ -1,0 +1,6 @@
+package gregoire.jdr.web.mapper.admin;
+
+@Service
+public class AdminWebResponseMapper {
+
+}

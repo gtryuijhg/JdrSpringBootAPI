@@ -1,0 +1,15 @@
+package gregoire.jdr.access;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminAccess {
+
+	public AdminAccess() {
+		
+	}
+	
+	public AdminRegisterAccessResponse register(AdminRegisterWebRequest webRequest) {
+		
+	}
+}

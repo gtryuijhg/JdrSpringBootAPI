@@ -1,0 +1,6 @@
+package gregoire.jdr.buisness;
+
+@Service
+public class AdminBuisness {
+
+}

@@ -1,0 +1,11 @@
+package gregoire.jdr.web.model.admin.response;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AdminRegisterWebResponse {
+
+	public AdminRegisterWebResponse() {
+		
+	}
+}

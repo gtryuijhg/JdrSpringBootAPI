@@ -1,0 +1,11 @@
+package gregoire.jdr.buisness.model.admin.request;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AdminRegisterActionBuisnessRequest {
+
+	public AdminRegisterActionBuisnessRequest() {
+		
+	}
+}

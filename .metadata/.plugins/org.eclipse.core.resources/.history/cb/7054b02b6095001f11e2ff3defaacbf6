@@ -1,0 +1,6 @@
+package gregoire.jdr.repository;
+
+@Repository
+public class AdminRepository {
+
+}

@@ -1,0 +1,11 @@
+package gregoire.jdr.access.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminAccessMapperValidator {
+
+	public AdminAccessMapperValidator() {
+		
+	}
+}

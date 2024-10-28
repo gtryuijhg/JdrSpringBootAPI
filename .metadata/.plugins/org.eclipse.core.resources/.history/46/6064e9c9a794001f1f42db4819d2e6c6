@@ -1,0 +1,5 @@
+package gregoire.jdr.buisness.validators.admin;
+
+public class AdminBuisnessMapperValidator {
+
+}

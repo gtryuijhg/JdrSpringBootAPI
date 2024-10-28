@@ -1,0 +1,5 @@
+package gregoire.jdr.repository.mapper;
+
+public class AdminRepositoryRequestMapper {
+
+}

@@ -1,0 +1,5 @@
+package gregoire.jdr.entities;
+
+public class Location {
+
+}

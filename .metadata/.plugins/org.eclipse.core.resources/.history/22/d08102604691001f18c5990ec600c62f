@@ -1,0 +1,6 @@
+package gregoire.jdr.access;
+
+@Service
+public class AdminAccess {
+
+}

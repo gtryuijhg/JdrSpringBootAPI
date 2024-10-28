@@ -1,0 +1,6 @@
+package gregoire.jdr.repository.validators.admin;
+
+@Service
+public class AdminRepositoryValidator {
+
+}

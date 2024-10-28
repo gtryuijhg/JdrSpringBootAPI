@@ -1,0 +1,25 @@
+package gregoire.jdr.buisness.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.buisness.model.admin.request.AdminRegisterActionBuisnessRequest;
+import gregoire.jdr.buisness.model.admin.response.AdminRegisterActionBuisnessResponse;
+
+@Service
+public class AdminBuisnessResponseMapper {
+
+	public AdminBuisnessResponseMapper() {
+		
+	}
+
+	public AdminRegisterActionBuisnessResponse mappAdminRegisterActionBuisnessResponseInvalidBuisnessRequest(AdminRegisterActionBuisnessRequest buisnessRequest, AdminRegisterActionBuisnessResponse buisnessResponse) {
+
+		buisnessResponse.setRole(buisnessRequest.isRole());
+		
+		buisnessResponse.setAuthenticated(buisnessRequest.isAuthenticated());
+		
+		buisnessResponse.setErrors(buisnessRequest.getErrors());
+		
+		return buisnessResponse;
+	}
+}

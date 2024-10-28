@@ -1,0 +1,13 @@
+1708353122835	Delete element
+1708353126041	Delete element
+1708595517245	Rename package 'gregoire.jdr.repository.model'
+1708595572408	Rename package 'gregoire.jdr.repository.model.ability'
+1708595580747	Rename package 'gregoire.jdr.repository.model.ability'
+1708678640156	Rename type 'AdminDeleteActionServiceRequest'
+1708683842913	Rename type 'InfoListServiceRequest'
+1708688871769	Rename type 'NonPLayerCharacterListRepositoryRequest'
+1708689495360	Rename compilation unit 'SkillUPdateActionRepositoryRequest.java'
+1708702531558	Rename type 'UserRegisterActionServiceRequest'
+1708768190844	Rename type 'AdminregisterActionRepositoryResponse'
+1708773937658	Move compilation unit
+1708870130600	Rename type 'LocationUpdateActionrepositoryResponse'

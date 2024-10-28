@@ -1,0 +1,26 @@
+1704183615640	Delete element
+1704183618739	Delete element
+1704184420620	Rename package 'gregoire.jdr.web.model'
+1704184522440	Rename package 'gregoire.jdr.web.model.ability'
+1704184531579	Rename package 'gregoire.jdr.web.model.ability'
+1704190918573	Rename type 'CHaracterGetWebResponse'
+1704204031180	Rename type 'EnnemyDeleteActionWebResponse'
+1704204157332	Rename type 'EnnemyCreateActionAngular'
+1704204165924	Rename type 'EnnemyCreateAngular'
+1704204177651	Rename type 'EnnemyDeleteActionAngular'
+1704204185968	Rename type 'EnnemyDeleteAngular'
+1704204192867	Rename type 'EnnemyListAngular'
+1704204201089	Rename type 'EnnemyCreateActionWebResponse'
+1704204210187	Rename package 'gregoire.jdr.web.model.ennemy.request'
+1704204217392	Rename package 'gregoire.jdr.web.model.ennemy.response'
+1704204250766	Rename type 'EnnemyCreateWebResponse'
+1704204256495	Rename type 'EnnemyDeleteActionWebResponse'
+1704204264573	Rename type 'EnnemyDeleteWebResponse'
+1704204272625	Rename type 'EnnemyListWebResponse'
+1704210911155	Rename type 'ItemDeleteActionWebResponse'
+1704467143515	Move compilation unit
+1704556838798	Move compilation unit
+1704558162605	Rename type 'UserCreateActionAngular'
+1704558182321	Rename type 'UserCreateAngular'
+1704558196501	Rename type 'UserCreateActionWebResponse'
+1704558207140	Rename type 'UserCreateWebResponse'

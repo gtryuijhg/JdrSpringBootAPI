@@ -1,0 +1,67 @@
+package gregoire.jdr.repository;
+
+import org.springframework.stereotype.Repository;
+
+import gregoire.jdr.queries.AdminRepositoryQuery;
+import gregoire.jdr.repository.mapper.AdminRepositoryRequestMapper;
+import gregoire.jdr.repository.mapper.AdminRepositoryResponseMapper;
+import gregoire.jdr.repository.model.admin.request.AdminRegisterActionRepositoryRequest;
+import gregoire.jdr.repository.model.admin.response.AdminRegisterActionRepositoryResponse;
+import gregoire.jdr.service.model.admin.request.AdminRegisterActionServiceRequest;
+
+@Repository
+public class AdminRepository {
+
+	private AdminRepositoryRequestMapper requestMapper;
+	private AdminRepositoryResponseMapper responseMapper;
+	private AdminRepositoryQuery repositoryQuery;
+	
+	public AdminRepository(AdminRepositoryRequestMapper requestMapper, AdminRepositoryResponseMapper responseMapper, AdminRepositoryQuery repositoryQuery) {
+		this.requestMapper = requestMapper;
+		this.responseMapper = responseMapper;
+		this.repositoryQuery = repositoryQuery;
+	}
+	
+	public AdminRegisterActionRepositoryResponse registerAction(AdminRegisterActionServiceRequest serviceRequest) {
+		
+		AdminRegisterActionRepositoryRequest repositoryRequest = new AdminRegisterActionRepositoryRequest();
+		AdminRegisterActionRepositoryResponse repositoryResponse = new AdminRegisterActionRepositoryResponse();
+		
+		//verifier intégrité des données
+		repositoryRequest = requestMapper.mappAdminRegisterActionRepositoryRequest(repositoryRequest, serviceRequest);
+		
+		//si pas d'erreurs
+		if (repositoryRequest.getErrors().isEmpty()) {
+			
+			try {
+				//requete en base de données pour trouver admin
+				User user = repositoryQuery.registerActionSearchAdminQuery(repositoryRequest);
+				
+				//si admin pas trouvé
+				if (user == null) {
+					//requete en base de données pour sauvegarder admin
+					User userSaved = repositoryQuery.registerActionPersistAdminQuery(repositoryRequest);
+					//mapping reponse ok
+					repositoryResponse = responseMapper.mappAdminRegisterActionRepositoryResponseOk(repositoryRequest, userSaved, repositoryResponse);
+					
+					return repositoryResponse;
+				}
+				
+				throw new Exception("User already in base !");
+					
+			} catch (Exception e) {
+				repositoryRequest.setErrors("repository", e.getMessage());
+			}
+			
+			//si admin trouvé, mapping reponse avec erreur admin found
+			repositoryResponse = responseMapper.mappAdminRegisterActionRepositoryResponseErrorAdminFound(repositoryRequest, repositoryResponse);
+			
+			return repositoryResponse;
+		}
+			
+		//si erreurs, mapping reponse avec erreurs repositoryRequest
+		repositoryResponse = responseMapper.mappAdminRegisterActionRepositoryResponseErrorsRepositoryRequest(repositoryRequest, repositoryResponse);
+			
+		return repositoryResponse;
+	}
+}

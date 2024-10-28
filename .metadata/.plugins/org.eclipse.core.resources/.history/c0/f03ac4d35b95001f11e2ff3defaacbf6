@@ -1,0 +1,14 @@
+package gregoire.jdr.database.connection;
+
+public class HibernateDatabaseConnection {
+
+	private EntityManagerFactory entityManagerFactory;
+	
+	public HibernateDatabaseConnection(EntityManagerFactory entityManagerFactory) {
+		this.entityManagerFactory = entityManagerFactory;
+	}
+	
+	public EntityManager getEntityManager() {
+		return entityManagerFactory.createEntityManager();
+	}
+}

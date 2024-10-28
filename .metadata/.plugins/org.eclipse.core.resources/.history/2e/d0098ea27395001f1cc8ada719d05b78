@@ -1,0 +1,13 @@
+package gregoire.jdr.repository.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminRepositoryValidator {
+
+	public AdminRepositoryValidator() {
+		
+	}
+	
+	
+}

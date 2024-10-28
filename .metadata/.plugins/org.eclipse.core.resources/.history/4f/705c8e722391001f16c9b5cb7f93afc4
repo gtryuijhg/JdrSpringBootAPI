@@ -1,0 +1,37 @@
+package gregoire.jdr.web.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.web.model.admin.request.AdminRegisterFrontRequest;
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+
+@Service
+public class AdminWebRequestMapper {
+
+	public AdminWebRequestMapper() {
+		
+	}
+	
+	public AdminRegisterWebRequest mappAdminRegisterWebReqest(AdminRegisterFrontRequest frontRequest, AdminRegisterWebRequest webRequest) {
+		
+		try {
+			if (frontRequest.isRole() == null) {
+				throw new Exception("An admin role must be defined !");
+			}
+		} catch (Exception e) {
+			webRequest.setErrors("role", e.getMessage());
+		}
+		webRequest.setRole(frontRequest.isRole());
+		
+		try {
+			if (frontRequest.isAuthenticated() == null) {
+				throw new Exception("An admin must be authenticable !");
+			}
+		} catch (Exception e) {
+			webRequest.setErrors("authenticated", e.getMessage());
+		}
+		webRequest.setRole(frontRequest.isRole());
+		
+		return webRequest;
+	}
+}

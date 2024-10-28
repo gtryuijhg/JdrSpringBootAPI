@@ -1,0 +1,43 @@
+package gregoire.jdr.access;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.access.model.admin.request.AdminRegisterAccessRequest;
+import gregoire.jdr.access.model.admin.response.AdminRegisterAccessResponse;
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+
+@Service
+public class AdminAccess {
+
+	public AdminAccess() {
+		
+	}
+	
+	public AdminRegisterAccessResponse register(AdminRegisterWebRequest webRequest) {
+		
+		AdminRegisterAccessRequest accessRequest = new AdminRegisterAccessRequest();
+		AdminRegisterAccessResponse accessResponse = new AdminRegisterAccessResponse();
+		
+		accessRequest = requestMapper.mappAdminRegisterAccessRequest(webRequest, accessRequest);
+		
+		if (!accessRequest.getErrors().isEmpty()) {
+			
+			accessResponse = responseMapper.mappAdminregisterAccessResponseInvalidAccessRequest(accessRequest, accessResponse);
+			
+			return accessResponse;
+		}
+		
+		accessRequest = validator.validateAdminRegisterAccessRequest(accessRequest);
+		
+		if (!accessRequest.getErrors().isEmpty()) {
+			
+			accessResponse = responseMapper.mappAdminRegisterAccessResponseInvalidAccessRequest(accessRequest, accessResponse);
+			
+			return accessResponse;
+		}
+		
+		accessResponse = responseMapper.mappAdminRegisterAccessResponseOk(accessRequest, accessResponse);
+		
+		return accessResponse;
+	}
+}

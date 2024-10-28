@@ -1,0 +1,21 @@
+package gregoire.jdr.web.validators.commons;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ValidatorUtils {
+
+	public ValidatorUtils() {
+		
+	}
+	
+	public void isBooleanNull(Boolean field, String errorMessage) throws NullPointerException {
+		if (field == null) {
+			throw new NullPointerException(errorMessage);
+		}
+	}
+	
+	public void isFieldBoolean(Boolean field, String errorMessage) {
+	
+	}
+}

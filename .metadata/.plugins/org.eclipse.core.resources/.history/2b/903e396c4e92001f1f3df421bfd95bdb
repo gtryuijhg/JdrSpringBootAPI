@@ -1,0 +1,25 @@
+package gregoire.jdr.entities;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Equipment {
+
+	private Integer id;
+	
+	private String outfit;
+	
+	private Integer armorValue;
+	
+	private String weapon;
+	
+	private Integer damageValue;
+	
+	private Integer backpackSlots;
+	
+	private Integer characterId;
+	
+	public Equipment() {
+		
+	}
+}

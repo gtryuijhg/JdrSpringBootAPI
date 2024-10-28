@@ -1,0 +1,31 @@
+package gregoire.jdr.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "character_stat")
+public class CharacterStat {
+
+	private Integer id;
+	
+	private Integer level;
+	
+	private Integer health;
+	
+	private Integer maxHealth;
+	
+	private Integer energy;
+	
+	private Integer maxEnergy;
+	
+	private Boolean playerCharacter;
+	
+	private Integer characterId;
+	
+	public CharacterStat() {
+		
+	}
+	
+	
+}

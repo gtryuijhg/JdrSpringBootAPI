@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;jdr-secutiry&apos;" deleteContents="true" description="Delete resource &apos;jdr-secutiry&apos;" element1="/jdr-secutiry" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1698766511041"/>
+</session>

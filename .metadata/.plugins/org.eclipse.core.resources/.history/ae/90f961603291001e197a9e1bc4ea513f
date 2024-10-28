@@ -1,0 +1,8 @@
+package gregoire.jdr.web.mapper.admin.request;
+
+public class AdminSigninWebRequestMapper {
+
+	public AdminSigninWebRequestMapper() {
+		
+	}
+}

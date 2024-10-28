@@ -1,0 +1,67 @@
+package gregoire.jdr.access.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.access.model.admin.request.AdminRegisterAccessRequest;
+import gregoire.jdr.access.model.admin.request.AdminRegisterActionAccessRequest;
+import gregoire.jdr.access.validators.admin.AdminAccessMapperValidator;
+import gregoire.jdr.web.model.admin.request.AdminRegisterActionWebRequest;
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+
+@Service
+public class AdminAccessRequestMapper {
+
+	private AdminAccessMapperValidator mapperValidator;
+	
+	public AdminAccessRequestMapper(AdminAccessMapperValidator mapperValidator) {
+		this.mapperValidator = mapperValidator;
+	}
+	
+	public AdminRegisterAccessRequest mappAdminRegisterAccessRequest(AdminRegisterWebRequest webRequest, AdminRegisterAccessRequest accessRequest) {
+		
+		Boolean role = mapperValidator.validateFieldRole(webRequest.isRole(), accessRequest);
+		
+		accessRequest.setRole(role);
+		
+		Boolean authenticated = mapperValidator.validateFieldAuthenticated(webRequest.isAuthenticated(), accessRequest);
+		
+		accessRequest.setAuthenticated(authenticated);
+		
+		return accessRequest;
+	}
+
+	public AdminRegisterActionAccessRequest mappAdminRegisterActionAccessRequest(AdminRegisterActionWebRequest webRequest, AdminRegisterActionAccessRequest accessRequest) {
+		
+		Boolean role = mapperValidator.validateFieldRole(webRequest.isRole(), accessRequest);
+		
+		accessRequest.setRole(role);
+		
+		Boolean authenticated = mapperValidator.validateFieldAuthenticated(webRequest.isAuthenticated(), accessRequest);
+		
+		accessRequest.setAuthenticated(authenticated);
+		
+		String firstName = mapperValidator.validateFieldFirstName(webRequest.getFirstName(), accessRequest);
+		
+		accessRequest.setFirstName(firstName);
+		
+		String lastName = mapperValidator.valiateFieldLastName(webRequest.getLastName(), accessRequest);
+		
+		accessRequest.setLastName(lastName);
+		
+		String login = mapperValidator.validateFieldLogin(webRequest.getLogin(), accessRequest);
+		
+		accessRequest.setLogin(login);
+		
+		String password = mapperValidator.validateFieldPassword(webRequest.getPassword(), accessRequest);
+		
+		accessRequest.setPassword(password);
+		
+		String confirmPassword = mapperValidator.validateFieldConfirmPassword(webRequest.getConfirmPassword(), accessRequest);
+		
+		accessRequest.setConfirmPassword(confirmPassword);
+		
+		return accessRequest;
+	}
+	
+	
+}

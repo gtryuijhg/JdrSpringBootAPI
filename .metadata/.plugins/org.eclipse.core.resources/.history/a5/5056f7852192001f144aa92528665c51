@@ -1,0 +1,10 @@
+package gregoire.jdr.web;
+
+@RestController
+@RequestMapping("/ability")
+public class AbilityController {
+
+	public AbilityController() {
+		
+	}
+}

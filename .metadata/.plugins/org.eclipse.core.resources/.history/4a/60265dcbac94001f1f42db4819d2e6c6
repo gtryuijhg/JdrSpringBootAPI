@@ -1,0 +1,24 @@
+package gregoire.jdr.buisness.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.buisness.model.admin.request.AdminRegisterActionBuisnessRequest;
+import gregoire.jdr.buisness.validators.commons.BuisnessValidatorUtils;
+
+@Service
+public class AdminBuisnessValidator {
+
+	private BuisnessValidatorUtils validatorUtils;
+	
+	public AdminBuisnessValidator(BuisnessValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+
+	public AdminRegisterActionBuisnessRequest validateAdminRegisterActionBuisnessRequest(AdminRegisterActionBuisnessRequest buisnessRequest) {
+		
+		
+		return null;
+	}
+	
+	
+}

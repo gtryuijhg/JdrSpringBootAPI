@@ -1,0 +1,27 @@
+package gregoire.jdr.web.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+import gregoire.jdr.web.validators.commons.ValidatorUtils;
+
+@Service
+public class AdminWebMapperValidator {
+
+	private ValidatorUtils validatorUtils;
+	
+	public AdminWebMapperValidator(ValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+	
+	public Boolean validateFieldRole(Boolean role, AdminRegisterWebRequest webRequest) {
+		
+		try {
+			
+		} catch (NullPointerException e) {
+			webRequest.setErrors("role", e.getMessage());
+		}
+		
+		return role;
+	}
+}

@@ -1,0 +1,27 @@
+package gregoire.jdr.access.model.admin.request;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AdminRegisterActionAccessRequest {
+
+	private Boolean role;
+	
+	private Boolean authenticated;
+	
+	private String firdtName;
+	
+	private String lastName;
+	
+	private String login;
+	
+	private String password;
+	
+	private String confirmPassword;
+	
+	private Map<String, String> errors;
+	
+	public AdminRegisterActionAccessRequest() {
+		
+	}
+}

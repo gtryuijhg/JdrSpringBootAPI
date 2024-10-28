@@ -1,0 +1,5 @@
+package gregoire.jdr.service.mapper.admin;
+
+public class AdminServiceResponseMapper {
+
+}

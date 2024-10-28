@@ -1,0 +1,30 @@
+package gregoire.jdr.service;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.buisness.model.admin.request.AdminRegisterActionBuisnessRequest;
+import gregoire.jdr.service.mapper.admin.AdminServiceRequestMapper;
+import gregoire.jdr.service.mapper.admin.AdminServiceResponseMapper;
+import gregoire.jdr.service.model.admin.request.AdminRegisterActionServiceRequest;
+import gregoire.jdr.service.model.admin.response.AdminRegisterActionServiceResponse;
+
+@Service
+public class AdminService {
+	
+	private AdminServiceRequestMapper requestMapper;
+	private AdminServiceResponseMapper responseMapper;
+
+	public AdminService(AdminServiceRequestMapper requestMapper, AdminServiceResponseMapper responseMapper) {
+		this.requestMapper = requestMapper;
+		this.responseMapper = responseMapper;
+	}
+	
+	public AdminRegisterActionServiceResponse registerAction(AdminRegisterActionBuisnessRequest buisnessRequest) {
+		
+		AdminRegisterActionServiceRequest serviceRequest = new AdminRegisterActionServiceRequest();
+		AdminRegisterActionServiceResponse serviceResponse = new AdminRegisterActionServiceResponse();
+		
+		
+		return serviceResponse;
+	}
+}

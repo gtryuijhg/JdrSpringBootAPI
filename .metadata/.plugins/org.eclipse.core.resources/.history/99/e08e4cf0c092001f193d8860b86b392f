@@ -1,0 +1,34 @@
+package gregoire.jdr.web.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.web.model.admin.request.AdminRegisterFrontRequest;
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+import gregoire.jdr.web.validators.admin.AdminWebMapperValidator;
+
+@Service
+public class AdminWebRequestMapper {
+
+	private AdminWebMapperValidator mapperValidator;
+	
+	public AdminWebRequestMapper(AdminWebMapperValidator mapperValidator) {
+		this.mapperValidator = mapperValidator;
+	}
+	
+	public AdminRegisterWebRequest mappAdminRegisterWebReqest(AdminRegisterFrontRequest frontRequest, AdminRegisterWebRequest webRequest) {
+		
+		Boolean role = mapperValidator.validateFieldRole(frontRequest.isRole(), webRequest);
+		
+		webRequest.setRole(role);
+		
+		Boolean authenticated = mapperValidator.validateFieldAuthenticated(frontRequest.isAuthenticated(), webRequest);
+		
+		webRequest.setAuthenticated(authenticated);
+		
+		return webRequest;
+	}
+	
+	public AdminRegisterActionWebRequest mappAdminRegisterActionWebRequest() {
+		
+	}
+}

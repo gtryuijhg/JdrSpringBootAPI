@@ -1,0 +1,13 @@
+package gregoire.jdr.buisness.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminBuisnessMapperValidator {
+
+	private BuisnessValidatorUtils validatorUtils;
+	
+	public AdminBuisnessMapperValidator(BuisnessValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+}

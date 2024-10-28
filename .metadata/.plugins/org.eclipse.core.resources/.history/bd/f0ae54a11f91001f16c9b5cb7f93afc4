@@ -1,0 +1,5 @@
+package gregoire.jdr.web.validators.admin;
+
+public class AdminWebMapperValidator {
+
+}

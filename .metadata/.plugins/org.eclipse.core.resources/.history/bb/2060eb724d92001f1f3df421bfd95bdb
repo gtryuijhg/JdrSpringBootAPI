@@ -1,0 +1,93 @@
+package gregoire.jdr.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "character_stat")
+public class CharacterStat {
+
+	private Integer id;
+	
+	private Integer level;
+	
+	private Integer health;
+	
+	private Integer maxHealth;
+	
+	private Integer energy;
+	
+	private Integer maxEnergy;
+	
+	private Boolean playerCharacter;
+	
+	private Integer characterId;
+	
+	public CharacterStat() {
+		
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getLevel() {
+		return level;
+	}
+
+	public void setLevel(Integer level) {
+		this.level = level;
+	}
+
+	public Integer getHealth() {
+		return health;
+	}
+
+	public void setHealth(Integer health) {
+		this.health = health;
+	}
+
+	public Integer getMaxHealth() {
+		return maxHealth;
+	}
+
+	public void setMaxHealth(Integer maxHealth) {
+		this.maxHealth = maxHealth;
+	}
+
+	public Integer getEnergy() {
+		return energy;
+	}
+
+	public void setEnergy(Integer energy) {
+		this.energy = energy;
+	}
+
+	public Integer getMaxEnergy() {
+		return maxEnergy;
+	}
+
+	public void setMaxEnergy(Integer maxEnergy) {
+		this.maxEnergy = maxEnergy;
+	}
+
+	public Boolean getPlayerCharacter() {
+		return playerCharacter;
+	}
+
+	public void setPlayerCharacter(Boolean playerCharacter) {
+		this.playerCharacter = playerCharacter;
+	}
+
+	public Integer getCharacterId() {
+		return characterId;
+	}
+
+	public void setCharacterId(Integer characterId) {
+		this.characterId = characterId;
+	}
+}

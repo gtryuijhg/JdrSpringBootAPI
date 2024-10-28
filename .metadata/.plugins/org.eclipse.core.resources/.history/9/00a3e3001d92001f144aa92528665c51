@@ -1,0 +1,23 @@
+package gregoire.jdr.access.validators.commons;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AccessValidatorUtils {
+
+	public AccessValidatorUtils() {
+		
+	}
+	
+	public void isBooleanNull(Boolean field, String errorMessage) {
+		if (field == null) {
+			throw new NullPointerException(errorMessage);
+		}
+	}
+	
+	public void isBooleanTrue(Boolean field, String errorMessage) {
+		if (field != true) {
+			throw new IllegalArgumentException(errorMessage);
+		}
+	}
+}

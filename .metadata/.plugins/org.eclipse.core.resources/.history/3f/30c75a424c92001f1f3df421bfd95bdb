@@ -1,0 +1,25 @@
+package gregoire.jdr.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "character_info")
+public class CharacterInfo {
+
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	private String characterClass;
+	
+	private String characterParticularity;
+	
+	private Integer characterId;
+	
+	public CharacterInfo() {
+		
+	}
+}

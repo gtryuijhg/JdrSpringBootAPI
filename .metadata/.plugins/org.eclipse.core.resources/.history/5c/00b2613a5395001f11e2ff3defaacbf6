@@ -1,0 +1,34 @@
+package gregoire.jdr.service.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.buisness.model.admin.request.AdminRegisterActionBuisnessRequest;
+import gregoire.jdr.service.model.admin.request.AdminRegisterActionServiceRequest;
+
+@Service
+public class AdminServiceRequestMapper {
+
+	private AdminServiceMapperValidator mapperValidator;
+	
+	public AdminServiceRequestMapper(AdminServiceMapperValidator mapperValidator) {
+		this.mapperValidator = mapperValidator;
+	}
+	
+	public AdminRegisterActionServiceRequest mappAdminRegisterActionServiceRequest(AdminRegisterActionServiceRequest serviceRequest, AdminRegisterActionBuisnessRequest buisnessRequest) {
+		
+		Boolean role = mapperValidator
+		serviceRequest.setRole(buisnessRequest.isRole());
+		
+		serviceRequest.setAuthenticated(buisnessRequest.isAuthenticated());
+		
+		serviceRequest.setFirstName(buisnessRequest.getFirstName());
+		
+		serviceRequest.setLastName(buisnessRequest.getLastName());
+		
+		serviceRequest.setLogin(buisnessRequest.getLogin());
+		
+		serviceRequest.setPassword(buisnessRequest.getPassword());
+		
+		return serviceRequest;
+	}
+}

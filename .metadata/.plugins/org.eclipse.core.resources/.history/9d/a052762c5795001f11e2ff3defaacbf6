@@ -1,0 +1,20 @@
+package gregoire.jdr.service.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.service.model.admin.request.AdminRegisterActionServiceRequest;
+
+@Service
+public class AdminServiceValidator {
+
+	public AdminServiceValidator() {
+		
+	}
+
+	public AdminRegisterActionServiceRequest validateAdminRegisterActionServiceRequest(AdminRegisterActionServiceRequest serviceRequest) {
+
+		return null;
+	}
+	
+	
+}

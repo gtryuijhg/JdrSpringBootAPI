@@ -1,0 +1,36 @@
+package gregoire.jdr.repository.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.repository.model.admin.request.AdminRegisterActionRepositoryRequest;
+
+@Service
+public class AdminRepositoryValidator {
+
+	public AdminRepositoryValidator() {
+		
+	}
+
+	public AdminRegisterActionRepositoryRequest validateAdminRegisterActionRepositoryRequest(AdminRegisterActionRepositoryRequest repositoryRequest) {
+
+		try {
+			if (repositoryRequest.isRole() != true) {
+				throw new IllegalArgumentException("An admin role must be at true !");
+			}
+		} catch (IllegalArgumentException e) {
+			repositoryRequest.setErrors("role", e.getMessage());
+		}
+		
+		try  {
+			if (repositoryRequest.isAuthenticated() != false) {
+				throw new IllegalArgumentException("You cannot be connected while at the registzer page !");
+			}
+		} catch (IllegalArgumentException e) {
+			repositoryRequest.setErrors("authenticated", e.getMessage());
+		}
+		
+		return repositoryRequest;
+	}
+	
+	
+}

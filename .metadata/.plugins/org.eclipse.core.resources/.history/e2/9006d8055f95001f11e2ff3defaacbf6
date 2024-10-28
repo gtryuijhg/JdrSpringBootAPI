@@ -1,0 +1,45 @@
+package gregoire.jdr.queries;
+
+public class AdminRepositoryQuery {
+
+	private HibernateDatabaseConnection connection;
+	
+	public AdminRepositoryQuery(HibernateDatabaseConnection connection) {
+		this.connection = connection;
+	}
+	
+	public User registerActionSearchAdminQuery(AdminRegisterActionRepositoryRequest repositoryRequest) {
+		
+		String queryString = "SELECT first_name, last_name, login, password FROM User WHERE first_name = :firstName AND last_name = :lastName AND login = :login AND password = :password AND role = :role";
+		Query query = connection.getEntityManager().createQuery(queryString, User.class);
+		
+		query.setParameter("firstName", repositoryRequest.getFirstName());
+		query.setParameter("lastName", repositoryRequest.getLastName());
+		query.setParameter("login", repositoryRequest.getLogin());
+		query.setParameter("password", repositoryRequest.getPassword());
+		query.setParameter("role", repositoryRequest.isRole());
+		
+		User user = (User) query.getSingleResult();
+		
+		connection.getEntityManager().close();
+		
+		return user;
+	}
+	
+	public User registerActionPersistAdminQuery(AdminRegisterActionRepositoryRequest repositoryRequest) {
+		
+		User user = new User();
+		
+		user.setFirstName(repositoryRequest.getFirstName());
+		user.setLastName(repositoryRequest.getLastName());
+		user.setLogin(repositoryRequest.getLogin());
+		user.setPassword(repositoryRequest.getPassword());
+		user.setRole(repositoryRequest.isRole());
+		
+		connection.getEntityManager().persist(user);
+		
+		connection.getEntityManager().close();
+		
+		return user;
+	}
+}

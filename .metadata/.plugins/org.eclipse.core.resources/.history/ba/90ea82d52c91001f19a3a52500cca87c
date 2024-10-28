@@ -1,0 +1,21 @@
+package gregoire.jdr.web.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+import gregoire.jdr.web.validators.commons.ValidatorUtils;
+
+@Service
+public class AdminWebValidator {
+
+	private ValidatorUtils validatorUtils;
+	
+	public AdminWebValidator(ValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+	
+	public AdminRegisterWebRequest validateAdminRegisterWebRequest(AdminRegisterWebRequest webRequest) {
+		
+		return webRequest;
+	}
+}

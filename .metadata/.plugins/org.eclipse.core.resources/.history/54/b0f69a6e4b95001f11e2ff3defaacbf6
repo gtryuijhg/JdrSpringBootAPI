@@ -1,0 +1,5 @@
+package gregoire.jdr.service;
+
+public class AdminService {
+
+}

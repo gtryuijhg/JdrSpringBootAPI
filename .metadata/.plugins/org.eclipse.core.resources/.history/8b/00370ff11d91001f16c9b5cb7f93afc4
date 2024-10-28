@@ -1,0 +1,33 @@
+package gregoire.jdr.web.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.web.model.admin.request.AdminRegisterFrontRequest;
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+
+@Service
+public class AdminWebRequestMapper {
+
+	public AdminWebRequestMapper() {
+		
+	}
+	
+	public AdminRegisterWebRequest mappAdminRegisterWebReqest(AdminRegisterFrontRequest frontRequest, AdminRegisterWebRequest webRequest) {
+		
+		try {
+			
+		} catch (Exception e) {
+			
+		}
+		webRequest.setRole(frontRequest.isRole());
+		
+		try {
+			
+		} catch (Exception e) {
+			
+		}
+		webRequest.setRole(frontRequest.isRole());
+		
+		return webRequest;
+	}
+}

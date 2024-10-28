@@ -1,0 +1,89 @@
+package gregoire.jdr.web;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+	public UserController() {
+		
+	}
+	
+	/**
+	 * show page to register a user
+	 * 
+	 * TODO complete request/response path
+	 * TODO define management rules for every request's applicative part
+	 * TODO manage exception handling along path
+	 */
+	@GetMapping("/register")
+	public void register() {
+		
+	}
+	
+	/**
+	 * send request to register a user
+	 * 
+	 * TODO complete request/response path
+	 * TODO define management rules for every request's applicative part
+	 * TODO manage exception handling along path
+	 */
+	@PostMapping("/register")
+	public void registerAction()  {
+		
+	}
+	
+	/**
+	 * show page to connect a user
+	 * 
+	 * TODO complete request/response path
+	 * TODO define management rules for every request's applicative part
+	 * TODO manage exception handling along path
+	 */
+	@GetMapping("/signin")
+	public void signin() {
+		
+	}
+	
+	/**
+	 * send request to connect a user
+	 * 
+	 * TODO complete request/response path
+	 * TODO define management rules for every request's applicative part
+	 * TODO manage exception handling along path
+	 */
+	@PostMapping("/signin")
+	public void signinAction() {
+		
+	}
+	
+	/**
+	 * show page to update an user password
+	 * user id in session
+	 * 
+	 * TODO complete request/response path
+	 * TODO define management rules for every request's applicative part
+	 * TODO manage exception handling along path
+	 */
+	@GetMapping("/update")
+	public void update() {
+		
+	}
+	
+	/**
+	 * send request to update an user password
+	 * user id in session
+	 * 
+	 * TODO complete request/response path
+	 * TODO define management rules for every request's applicative part
+	 * TODO manage exception handling along path
+	 */
+	@PutMapping("/update")
+	public void updateAction() {
+		
+	}
+}

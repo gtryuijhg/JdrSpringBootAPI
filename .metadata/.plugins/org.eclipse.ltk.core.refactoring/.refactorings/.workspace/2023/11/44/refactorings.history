@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;jdr-redis&apos;" deleteContents="true" description="Delete resource &apos;jdr-redis&apos;" element1="/jdr-redis" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1699086875703"/>
+</session>

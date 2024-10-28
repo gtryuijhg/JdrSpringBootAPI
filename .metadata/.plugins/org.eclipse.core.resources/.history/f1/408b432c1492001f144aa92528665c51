@@ -1,0 +1,15 @@
+package gregoire.jdr.access.validators.commons;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AccessValidatorUtils {
+
+	public AccessValidatorUtils() {
+		
+	}
+	
+	public void isBooleanNull() {
+		
+	}
+}

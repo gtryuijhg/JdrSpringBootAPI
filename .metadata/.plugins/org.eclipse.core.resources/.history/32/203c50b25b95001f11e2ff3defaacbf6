@@ -1,0 +1,5 @@
+package gregoire.jdr.database.connection;
+
+public abstract class HibernateDatabaseConstants {
+
+}

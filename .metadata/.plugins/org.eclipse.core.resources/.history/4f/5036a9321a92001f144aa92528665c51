@@ -1,0 +1,15 @@
+package gregoire.jdr.access.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminAccessResponseMapper {
+
+	public AdminAccessResponseMapper() {
+		
+	}
+	
+	public AdminRegisterAccessResponse mappAdminRegisterAccessResponseInvalidAccessRequest(AdminRegisterAccessRequest accessRequest, AdminRegisterAccessResponse accessResponse) {
+		
+	}
+}

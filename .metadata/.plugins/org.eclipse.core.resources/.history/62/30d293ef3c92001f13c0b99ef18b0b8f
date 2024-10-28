@@ -1,0 +1,7 @@
+package gregoire.jdr.web;
+
+@RestController
+@RequestMapping("/game")
+public class GameController {
+
+}

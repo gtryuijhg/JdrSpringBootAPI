@@ -1,0 +1,43 @@
+package gregoire.jdr.web.model.admin.response;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AdminRegisterActionWebResponse {
+
+	private Boolean role;
+	
+	private Boolean authenticated;
+	
+	private Map<String, String> errors;
+	
+	public AdminRegisterActionWebResponse() {
+		
+	}
+
+	public Boolean getRole() {
+		return role;
+	}
+
+	public void setRole(Boolean role) {
+		this.role = role;
+	}
+
+	public Boolean getAuthenticated() {
+		return authenticated;
+	}
+
+	public void setAuthenticated(Boolean authenticated) {
+		this.authenticated = authenticated;
+	}
+
+	public Map<String, String> getErrors() {
+		return errors;
+	}
+
+	public void setErrors(Map<String, String> errors) {
+		this.errors = errors;
+	}
+}

@@ -1,0 +1,36 @@
+package gregoire.jdr.access.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.access.model.admin.request.AdminRegisterAccessRequest;
+import gregoire.jdr.access.validators.commons.AccessValidatorUtils;
+
+@Service
+public class AdminAccessMapperValidator {
+
+	private AccessValidatorUtils validatorUtils;
+	
+	public AdminAccessMapperValidator(AccessValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+	
+	public Boolean validateFieldRole(Boolean role, AdminRegisterAccessRequest accessRequest) {
+		
+		try {
+			validatorUtils.isBooleanNull(role, "An admin role must be defined !");
+		} catch (NullPointerException e) {
+			accessRequest.setErrors("role", e.getMessage());
+		}
+		
+		return role;
+	}
+	
+	public Boolean validateFieldAuthenticated(Boolean authenticated, AdminRegisterAccessRequest accessRequest) {
+		
+		try {
+			validatorUtils.isBooleanNull(authenticated, "An admin must be authenticable !");
+		} catch (NullPointerException e) {
+			accessRequest.setErrors("authenticated", e.getMessage());
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package gregoire.jdr.buisness.validators.commons;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BuisnessValidatorUtils {
+
+	public BuisnessValidatorUtils() {
+		
+	}
+}

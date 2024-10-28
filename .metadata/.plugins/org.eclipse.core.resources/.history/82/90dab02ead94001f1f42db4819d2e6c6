@@ -1,0 +1,31 @@
+package gregoire.jdr.buisness.validators.commons;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BuisnessValidatorUtils {
+
+	public BuisnessValidatorUtils() {
+		
+	}
+	
+	public void isBooleanNull(Boolean field, String errorMessage) throws NullPointerException {
+		if (field == null) {
+			throw new NullPointerException(errorMessage);
+		}
+	}
+
+	public void isStringNull(String field, String errorMessage) throws NullPointerException {
+		if (field == null || field.trim().length() == 0) {
+			throw new NullPointerException(errorMessage);
+		}
+	}
+
+	public void isBooleanTrue(Boolean field, String errorMessage) throws IllegalArgumentException {
+		if (field != true) {
+			throw new IllegalArgumentException(errorMessage);
+		}
+	}
+	
+	
+}

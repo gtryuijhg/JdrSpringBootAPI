@@ -1,0 +1,25 @@
+package gregoire.jdr.web.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+import gregoire.jdr.web.model.admin.response.AdminRegisterWebResponse;
+
+@Service
+public class AdminWebResponseMapper {
+
+	public AdminWebResponseMapper() {
+		
+	}
+	
+	public AdminRegisterWebResponse mappAdminRegisterWebResponseInvalidWebRequest(AdminRegisterWebRequest webRequest, AdminRegisterWebResponse webResponse) {
+		
+		webResponse.setRole(webRequest.isRole());
+		
+		webResponse.setAuthenticated(webRequest.isAuthenticated());
+		
+		webResponse.setErrors(webRequest.getErrors());
+		
+		return webResponse;
+	}
+}

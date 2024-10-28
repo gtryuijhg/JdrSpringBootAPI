@@ -1,0 +1,31 @@
+package gregoire.jdr.web;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/nonPlayerCharacter")
+public class NonPlayerCharacterController {
+
+	public NonPlayerCharacterController() {
+		
+	}
+	
+	/**
+	 * show page to create an npc
+	 * game id in session
+	 * 
+	 * TODO complete request/response path
+	 * TODO define management rules for every request's applicative part
+	 * TODO manage exception handling along path
+	 */
+	@GetMapping("/create")
+	public void create() {
+		
+	}
+	
+	public void createAction() {
+		
+	}
+}

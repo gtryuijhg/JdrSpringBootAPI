@@ -1,0 +1,11 @@
+package gregoire.jdr.web.mapper.admin;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminWebResponseMapper {
+
+	public AdminWebResponseMapper() {
+		
+	}
+}

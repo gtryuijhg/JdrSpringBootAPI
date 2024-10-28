@@ -1,0 +1,39 @@
+package gregoire.jdr.web.validators.admin;
+
+import org.springframework.stereotype.Service;
+
+import gregoire.jdr.web.model.admin.request.AdminRegisterWebRequest;
+import gregoire.jdr.web.validators.commons.ValidatorUtils;
+
+@Service
+public class AdminWebValidator {
+
+	private ValidatorUtils validatorUtils;
+	
+	public AdminWebValidator(ValidatorUtils validatorUtils) {
+		this.validatorUtils = validatorUtils;
+	}
+	
+	public AdminRegisterWebRequest validateAdminRegisterWebRequest(AdminRegisterWebRequest webRequest) {
+		
+		//validate boolean role
+		try {
+			if (webRequest.isRole() != true && webRequest.isRole() != false) {
+				throw new IllegalArgumentException("An admin role must be a boolean !");
+			}
+		} catch (IllegalArgumentException e) {
+			webRequest.setErrors("role", e.getMessage());
+		}
+		
+		
+		try {
+			if (webRequest.isAuthenticated() != true && webRequest.isAuthenticated() != false) {
+				throw new IllegalArgumentException("An admin authentication must be a boolean !");
+			}
+		} catch (IllegalArgumentException e) {
+			webRequest.setErrors("authenticated", e.getMessage());
+		}
+		//validate boolean authenticated
+		return webRequest;
+	}
+}

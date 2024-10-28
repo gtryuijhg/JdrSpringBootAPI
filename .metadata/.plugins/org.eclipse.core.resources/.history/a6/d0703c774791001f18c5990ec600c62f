@@ -1,0 +1,11 @@
+package gregoire.jdr.access.model.admin.response;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AdminRegisterAccessResponse {
+
+	public AdminRegisterAccessResponse() {
+		
+	}
+}

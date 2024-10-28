@@ -1,0 +1,5 @@
+package gregoire.jdr.web.model.admin.response;
+
+public class AdminRegisterActionWebResponse {
+
+}

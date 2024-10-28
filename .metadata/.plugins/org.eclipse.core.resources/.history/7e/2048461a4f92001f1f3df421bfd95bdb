@@ -1,0 +1,7 @@
+package gregoire.jdr.entities;
+
+@Entity
+@Table(name = "item")
+public class Item {
+
+}

@@ -1,0 +1,19 @@
+package gregoire.jdr.service.validators.commons;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ServiceValidatorUtils {
+
+	public ServiceValidatorUtils() {
+		
+	}
+	
+	public void isBooleanNull() throws NullPointerException {
+		
+	}
+	
+	public void isStringNull() throws NullPointerException {
+		
+	}
+}

@@ -1,0 +1,25 @@
+package gregoire.jdr.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "user")
+public class User {
+
+	private Integer id;
+	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String login;
+	
+	private String password;
+	
+	private Boolean role;
+	
+	public User() {
+		
+	}
+}

@@ -1,0 +1,6 @@
+package gregoire.jdr.web.model.admin.response;
+
+@Component
+public class AdminRegisterWebResponse {
+
+}

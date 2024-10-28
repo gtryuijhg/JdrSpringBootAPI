@@ -1,0 +1,6 @@
+package gregoire.jdr.entities;
+
+@Entity
+public class Ability {
+
+}

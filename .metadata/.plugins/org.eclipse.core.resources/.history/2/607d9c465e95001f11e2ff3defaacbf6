@@ -1,0 +1,8 @@
+package gregoire.jdr.repository.model.admin.response;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AdminRegisterActionRepositoryResponse {
+
+}

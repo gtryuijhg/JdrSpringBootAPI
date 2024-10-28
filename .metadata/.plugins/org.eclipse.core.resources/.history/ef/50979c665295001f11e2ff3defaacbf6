@@ -1,0 +1,5 @@
+package gregoire.jdr.service.validators.commons;
+
+public class ServiceValidatorUtils {
+
+}

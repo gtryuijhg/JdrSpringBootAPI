@@ -1,0 +1,21 @@
+package gregoire.jdr.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "game")
+public class Game {
+
+	private Integer id;
+	
+	private String name;
+	
+	private Integer maxPLayerNumber;
+	
+	private Integer AdminId;
+	
+	public Game() {
+		
+	}
+}

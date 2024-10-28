@@ -1,0 +1,15 @@
+package gregoire.jdr.buisness;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AdminBuisness {
+
+	public AdminBuisness() {
+		
+	}
+	
+	public AdminRegisterActionBuisnessResponse registerAction(AdminRegisterActionAccessRequest accessRequest) {
+		
+	}
+}
